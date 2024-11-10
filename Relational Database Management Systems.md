@@ -103,7 +103,7 @@ Normalization is the process of structuring tables to reduce redundancy and impr
 
 #### 8. **Indexes and Performance Optimization**
 
-Indexes speed up data retrieval by providing a way for the RDBMS to find data without scanning the entire table.
+[Indexes](Indexes.md) speed up data retrieval by providing a way for the RDBMS to find data without scanning the entire table.
 
 - **Types of Indexes**:
   - **Primary Index**: Built automatically on the primary key.
@@ -120,7 +120,7 @@ CREATE INDEX idx_student_age ON students (age);
 
 #### 9. **Transactions and ACID Properties**
 
-Transactions ensure data integrity using **ACID** properties:
+[Transactions](Transactions.md) ensure data integrity using **ACID** properties:
 
 - **Atomicity**: All operations in a transaction must succeed or fail together.
 - **Consistency**: Ensures data follows all constraints.
@@ -152,7 +152,7 @@ Joins are used to retrieve related data from multiple tables.
 
 #### 11. **Views**
 
-A **View** is a virtual table created by a query. It helps in data security, simplification, and managing complex queries.
+A [**View**](views.md) is a virtual table created by a query. It helps in data security, simplification, and managing complex queries.
 
 **Example**:
 
