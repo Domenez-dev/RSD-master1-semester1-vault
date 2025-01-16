@@ -149,3 +149,5 @@ SELECT * FROM Customers WHERE LastName = 'Smith';
   - Improve read performance but can slow down write operations.
 
 Both views and indexes are powerful tools in SQL that help optimize and manage data more effectively.
+
+#ASGBD 

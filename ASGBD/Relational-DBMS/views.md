@@ -173,7 +173,15 @@ Querying `dept_salary_totals` gives:
 
 #### Example 2: Hiding Sensitive Information
 
-Suppose the `employees` table contains a `ssn` column (Social Security Number) that should not be accessible to all users. A view can be created without this column
+Suppose the `employees` table contains a `ssn` column (Social Security Number) that should not be accessible to all users. A view can be created without this column:
+
+```sql
+CREATE VIEW public_employees AS
+SELECT emp_id, emp_name, department
+FROM employees;
+```
+
+This view provides access to employee data without revealing sensitive information.
 
 #### Example 3: Simplifying Complex Queries
 
@@ -185,3 +193,7 @@ SELECT e.emp_name, e.salary, d.dept_name
 FROM employees e
 JOIN departments d ON e.department = d.dept_id;
 ```
+
+Now, querying employee and department information can be done by querying `employee_department` without writing complex join statements every time.
+
+#ASGBD 

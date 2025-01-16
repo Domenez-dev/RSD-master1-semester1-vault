@@ -289,3 +289,5 @@ The query planner in an RDBMS uses relational algebra operations to construct an
 ### Summary
 
 Relational algebra provides a structured approach to data manipulation through operations such as selection, projection, join, and union. SQL extends these relational algebra concepts to real-world database queries, and understanding relational algebra helps in optimizing and constructing effective SQL queries.
+
+#ASGBD

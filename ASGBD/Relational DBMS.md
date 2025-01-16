@@ -208,3 +208,5 @@ Backups are essential for data safety, and RDBMS provides several methods for re
 ---
 
 This detailed guide covers the essential concepts of RDBMS, from System R foundations to catalogs, schemas, normalization, and advanced techniques. Let me know if you'd like more details on any of these topics!
+
+#ASGBD

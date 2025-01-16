@@ -119,3 +119,5 @@ DROP INDEX idx_department;
 - **Trade-off**: Faster reads but potentially slower writes (updates/inserts).
 
 Indexes are a powerful tool to make your database more efficient when used thoughtfully, providing faster query responses and better overall performance.
+
+#ASGBD

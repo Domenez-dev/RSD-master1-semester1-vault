@@ -132,3 +132,5 @@ In PostgreSQL, `pg_stat_activity` provides details on active queries and their p
 ---
 
 These catalogs provide essential metadata that enables the DBMS to manage and optimize database operations, enforce integrity, control access, and maintain overall structure and security.
+
+#ASGBD

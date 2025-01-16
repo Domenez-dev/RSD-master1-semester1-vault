@@ -178,3 +178,5 @@ The DBMS provides backup and recovery mechanisms to protect data from unexpected
 3. **DBMS Functionality**: Supports data storage, retrieval, transaction management, concurrency, integrity, and recovery.
 
 A DBMS simplifies complex tasks in managing, retrieving, and safeguarding data, making it a crucial tool for organized data handling.
+
+#ASGBD

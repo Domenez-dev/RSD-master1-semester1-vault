@@ -108,3 +108,5 @@ mysqldump -u username -p database_name > backup.sql
 ```
 
 This command creates a backup of `database_name` in `backup.sql`.
+
+#ASGBD

@@ -94,3 +94,5 @@ In the event of a system failure, transactions can be left incomplete, leading t
 - **Recovery mechanisms** (logging, checkpointing, shadow paging) ensure that the database can recover from system failures and maintain data integrity.
 
 Transactions are fundamental in any DBMS, helping to manage data changes reliably and ensuring that even in cases of failure, the database remains consistent and accurate.
+
+#ASGBD

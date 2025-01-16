@@ -186,3 +186,5 @@ PARTITION BY RANGE (order_date) (
 ```
 
 ---
+
+#ASGBD
