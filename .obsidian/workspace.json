@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "58a8e2ce626f360f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9638c9374ab4104",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5aaec33c0b4cdb1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ASGBD/Resume.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Resume"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6aa879b2ab73484e",
+    "type": "split",
+    "children": [
+      {
+        "id": "85f5ae175e2f8460",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1da86dc95e86c9c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9b48e49abbbd6d5c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "94623710919c035c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 211.50043487548828
+  },
+  "right": {
+    "id": "7276bb7aff218b59",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b71f4157d53d6fd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d06a62388e9ff45",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Algo/Comparison-based Sorting Algorithms.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Comparison-based Sorting Algorithms"
+            }
+          },
+          {
+            "id": "32a38c4308939efd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Algo/Comparison-based Sorting Algorithms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Comparison-based Sorting Algorithms"
+            }
+          },
+          {
+            "id": "9061c29493051b61",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "359d8cce6793d58d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Algo/Comparison-based Sorting Algorithms.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Comparison-based Sorting Algorithms"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5aaec33c0b4cdb1f",
+  "lastOpenFiles": [
+    "ASGBD/Relational-DBMS/views.md",
+    "ASGBD/Relational-DBMS/Indexes.md",
+    "ASGBD/temp.md",
+    "ASGBD/systemR.pdf",
+    "ASGBD/Structure and Functionality of a (DBMS).md",
+    "ASGBD/Resume.md",
+    "ASGBD/Relational DBMS.md",
+    "ASGBD/README.md",
+    "ASGBD/Database Management Systems.md",
+    "ASGBD/tp/TP2.pdf",
+    "Untitled.md",
+    "Algo/Sorting Algorithms/Comparison-based Sorting Algorithms.md",
+    "SE/tp/tp.c",
+    "SE/tp/shared_file.txt",
+    "SE/tp/sema.c",
+    "SE/tp/sema",
+    "SE/tp/rw.c",
+    "SE/tp/rw",
+    "SE/tp/a.out",
+    "SE/tp",
+    "views.md",
+    "temp.md",
+    "Transactions.md",
+    "Tables.md",
+    "Structure and Functionality of a (DBMS).md",
+    "SQL Operations.md",
+    "Relational-DBMS/Transactions.md",
+    "Relational-DBMS/Tables.md",
+    "Relational-DBMS/SQL Operations.md",
+    "Relational-DBMS/Indexes.md",
+    "Relational-DBMS/Catalogs.md",
+    "Relational-DBMS/Alter Table.md",
+    "Relational DBMS.md",
+    "README.md",
+    "Indexes.md"
+  ]
+}
