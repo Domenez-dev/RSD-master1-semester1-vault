@@ -41,9 +41,9 @@ graph TD
 ## 4. Calculs de Coût (Très Important pour Examens)
 
 ### Formule de Base
-```
+$$
 Coût = 10^8 / Bande_Passante(bps)
-```
+$$
 
 ### Exemples de Calculs
 | Interface | Bande Passante | Calcul | Coût |
@@ -132,11 +132,14 @@ sequenceDiagram
 4. Mise à jour table routage
 
 ### Exemple Pratique
+```mermaid
+graph LR
+    R1 ---|10| R2
+    R2 ---|20| R3
+    R1 ---|30| R3
 ```
-R1 ---(10)--- R2 ---(20)--- R3
-     \               /
-      `--(30)------´
 
+```
 Chemin 1: R1-R2-R3 = 30
 Chemin 2: R1-R3 = 30
 Résultat: ECMP (Equal Cost Multi-Path)

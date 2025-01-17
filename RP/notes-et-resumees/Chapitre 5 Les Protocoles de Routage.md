@@ -1,4 +1,4 @@
-## I. Classification des Protocoles
+## Classification des Protocoles
 
 ```mermaid
 graph TD
@@ -13,7 +13,7 @@ graph TD
     C --> J[BGP]
 ```
 
-## I.I Protocoles IGP
+## I Protocoles IGP
 ### 1. Protocoles à Vecteur de Distance
 
 #### [RIP](RIP%20-%20D%C3%A9tails%20Techniques%20Approfondis) (Routing Information Protocol)
@@ -75,7 +75,7 @@ graph TD
 - Utilisé par les FAI
 - Support multiprotocole natif
 
-# Protocoles EGP
+# II. Protocoles EGP
 
 ### BGP (Border Gateway Protocol)
 - **Caractéristiques**:
