@@ -75,7 +75,7 @@ graph TD
 - Utilisé par les FAI
 - Support multiprotocole natif
 
-## Protocoles EGP
+# Protocoles EGP
 
 ### BGP (Border Gateway Protocol)
 - **Caractéristiques**:
