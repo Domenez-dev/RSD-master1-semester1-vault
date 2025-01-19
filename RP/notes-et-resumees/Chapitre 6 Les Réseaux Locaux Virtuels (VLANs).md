@@ -74,6 +74,16 @@ graph TD
     C --> E[TCI 2 octets]
 ```
 
+### Problèmes courants avec les agrégations
+
+1. **Non-concordance du VLAN natif** : Ports d'agrégation avec des VLAN natifs différents, causant des notifications, un mauvais acheminement du trafic, et des risques de sécurité.
+    
+2. **Non-concordance du mode d'agrégation** : Un port en mode "désactivé" et l'autre en mode "actif", arrêtant la liaison agrégée.
+    
+3. **VLAN et sous-réseaux IP** : Périphériques avec adresses IP incorrectes, entraînant une perte de connectivité réseau.
+    
+4. **VLAN autorisés sur les agrégations** : Liste des VLAN non mise à jour, entraînant un trafic imprévu ou l'absence de trafic.
+
 ## 4. Protocole VTP (VLAN Trunking Protocol)
 
 ### Modes VTP

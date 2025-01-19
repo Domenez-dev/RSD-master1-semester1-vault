@@ -9,11 +9,11 @@ Les réseaux de Petri ont été développés dans les années 60-62 par Carl Ada
 ## Définition formelle
 
 Un réseau de Petri R est défini par le tuple (P, T, Pre, Post, M0), où :
-- P = {p1, p2, ..., pn} : ensemble fini de places
-- T = {t1, t2, ..., tm} : ensemble de transitions
-- Pre : P × T → ℕ : application d'incidence avant
-- Post : P × T → ℕ : application d'incidence arrière
-- M0 : P → ℕ : marquage initial
+- $P$ = {p1, p2, ..., pn} : ensemble fini de places
+- $T$ = {t1, t2, ..., tm} : ensemble de transitions
+- $Pre$ : P × T → ℕ : application d'incidence avant
+- $Post$ : P × T → ℕ : application d'incidence arrière
+- $M_0$ : P → ℕ : marquage initial
 
 ## Représentation
 
@@ -53,7 +53,7 @@ Un réseau de Petri R est défini par le tuple (P, T, Pre, Post, M0), où :
 
 3. **Séquence de franchissements**
    - Suite ordonnée de transitions
-   - Notation : M0[σ⟩M
+   - Notation : **$M_0[σ⟩M$**
 
 ### Accessibilité
 1. **Marquage accessible**
