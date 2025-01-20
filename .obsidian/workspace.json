@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "a45994dfa4b45e5f",
+        "id": "94f1d9dc51f92774",
         "type": "tabs",
         "children": [
           {
-            "id": "10ca743bac9ea96d",
+            "id": "47a36d8025a73395",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RP/notes-et-resumees/Questions Fréquentes d'Examen - Réseaux et Protocoles.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Questions Fréquentes d'Examen - Réseaux et Protocoles"
+            }
+          },
+          {
+            "id": "4164c6341c12fe2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,8 +34,47 @@
               "icon": "lucide-file",
               "title": "OSPF - Détails Techniques Approfondis"
             }
+          },
+          {
+            "id": "396f01bce78cffcd",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "b9e3c4db5299a4ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RP/notes-et-resumees/RIP - Détails Techniques Approfondis.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RIP - Détails Techniques Approfondis"
+            }
+          },
+          {
+            "id": "3d4e3d4a31934f89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RP/notes-et-resumees/Chapitre 5 Les Protocoles de Routage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapitre 5 Les Protocoles de Routage"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -162,16 +215,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1da86dc95e86c9c1",
+  "active": "396f01bce78cffcd",
   "lastOpenFiles": [
-    "RP/notes-et-resumees/Chapitre 5 Les Protocoles de Routage.md",
+    "RP/notes-et-resumees/Questions Fréquentes d'Examen - Réseaux et Protocoles.md",
+    "RP/Chapitres Etudiee.md",
+    "notes-et-resumees%2FQuestions Fréquentes d'Examen - Réseaux et Protocoles.md",
+    "RP/notes-et-resumees/OSPF - Détails Techniques Approfondis.md",
+    "RP/pdfs du prof/Chap. VI Les réseaux locaux virtuels.pdf",
+    "RP/notes-et-resumees/RIP - Détails Techniques Approfondis.md",
     "RP/notes-et-resumees/Chapitre 6 Les Réseaux Locaux Virtuels (VLANs).md",
+    "RP/notes-et-resumees/Chapitre 5 Les Protocoles de Routage.md",
+    "RP/Titre Important sur le Modules.md",
     "RP/pdfs du prof/Chap.V. Les protocoles de routage.pdf",
     "RP/notes-et-resumees/Chapitre 1 Généralités.md",
+    "RP/notes-et-resumees/Chapitre 3 L'adressage IPv4 et IPv6.md",
     "RP/pdfs du prof/Chap.V Le protocole de routage RIPv1.pdf",
     "RP/pdfs du prof/Chap. V Le protocole de routage dynamique OSPF.pdf",
     "Untitled.md",
-    "RP/notes-et-resumees/Questions Fréquentes d'Examen - Réseaux et Protocoles.md",
     "MEPS/Les Files d'Attente.md",
     "MEPS/cours prof/Cours_Introduction.pdf",
     "MEPS/cours prof/Cours_FA.pdf",
@@ -182,14 +242,8 @@
     "MEPS/cours prof/Cours_Chaines de Markov.pdf",
     "MEPS/cours prof",
     "MEPS/Exercices Differents Systems de Files d'Attente.md",
-    "RP/pdfs du prof/Chap. VI Les réseaux locaux virtuels.pdf",
-    "RP/notes-et-resumees/Chapitre 3 L'adressage IPv4 et IPv6.md",
-    "RP/notes-et-resumees/OSPF - Détails Techniques Approfondis.md",
-    "RP/notes-et-resumees/RIP - Détails Techniques Approfondis.md",
     "RP/pdfs du prof/Chap. III L’adressage IPv4 et IPv6.pdf",
     "Untitled.canvas",
-    "RP/Chapitres Etudiee.md",
-    "RP/Titre Important sur le Modules.md",
     "2025-01-16.md",
     "Algo/Sorting Algorithms/Hybrid and Advanced Algorithms.md",
     "RP/pdfs du prof/Untitled.md",
