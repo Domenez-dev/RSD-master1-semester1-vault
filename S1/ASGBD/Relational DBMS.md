@@ -20,7 +20,7 @@ A **Relational Database Management System (RDBMS)** is a type of DBMS that store
 
 #### [3. Tables](Tables.md)
 
-[Tables](Relational-DBMS/Tables.md) are the fundamental building blocks of relational databases. They store data in a structured format using rows and columns, enabling efficient querying and manipulation. This course covers the structure, creation, manipulation, and best practices for working with tables in a database management system (DBMS).
+[Tables](Tables.md) are the fundamental building blocks of relational databases. They store data in a structured format using rows and columns, enabling efficient querying and manipulation. This course covers the structure, creation, manipulation, and best practices for working with tables in a database management system (DBMS).
 
 ---
 
@@ -63,7 +63,7 @@ SQL is the language for managing and querying data in RDBMS. It has several cate
 #### 5. **Schema and Catalog**
 
 - **Schema**: The structure or design of the database, including tables, columns, data types, etc.
-- [**Catalog**](Relational-DBMS/Catalogs.md): Metadata repository in an RDBMS that stores information about database objects (tables, indexes, views).
+- [**Catalog**](Catalogs.md): Metadata repository in an RDBMS that stores information about database objects (tables, indexes, views).
 
 **Example**: In SQL Server, the catalog stores details on table structures, data types, indexes, and views.
 
@@ -71,7 +71,7 @@ SQL is the language for managing and querying data in RDBMS. It has several cate
 
 #### 6. **Relational Algebra and SQL Operations**
 
-[Relational Algebra](Relational-DBMS/SQL%20Operations.md) is a formal system of operations on relations, forming the theoretical foundation of SQL.
+[Relational Algebra](SQL%20Operations.md) is a formal system of operations on relations, forming the theoretical foundation of SQL.
 
 - **Select (σ)**: Filters rows based on a condition.
 - **Project (π)**: Selects specific columns from a table.
@@ -109,7 +109,7 @@ Normalization is the process of structuring tables to reduce redundancy and impr
 
 #### 8. **Indexes and Performance Optimization**
 
-[Indexes](Relational-DBMS/Indexes.md) speed up data retrieval by providing a way for the RDBMS to find data without scanning the entire table.
+[Indexes](Indexes.md) speed up data retrieval by providing a way for the RDBMS to find data without scanning the entire table.
 
 - **Types of Indexes**:
   - **Primary Index**: Built automatically on the primary key.
@@ -126,7 +126,7 @@ CREATE INDEX idx_student_age ON students (age);
 
 #### 9. **Transactions and ACID Properties**
 
-[Transactions](Relational-DBMS/Transactions.md) ensure data integrity using **ACID** properties:
+[Transactions](Transactions.md) ensure data integrity using **ACID** properties:
 
 - **Atomicity**: All operations in a transaction must succeed or fail together.
 - **Consistency**: Ensures data follows all constraints.
@@ -158,7 +158,7 @@ Joins are used to retrieve related data from multiple tables.
 
 #### 11. **Views**
 
-A [**View**](Relational-DBMS/views.md) is a virtual table created by a query. It helps in data security, simplification, and managing complex queries.
+A [**View**](views.md) is a virtual table created by a query. It helps in data security, simplification, and managing complex queries.
 
 **Example**:
 

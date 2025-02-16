@@ -60,15 +60,15 @@ T240: Route supprimée de la table
 ## 4. Comparaison RIPv1 vs RIPv2 (Points d'Examen)
 
 ### Tableau Comparatif Détaillé
-| Caractéristique | RIPv1 | RIPv2 |
-|-----------------|-------|--------|
-| Classe | Par classe | Sans classe |
-| Masque | Non inclus | Inclus |
-| Diffusion | 255.255.255.255 | 224.0.0.9 |
-| VLSM | Non supporté | Supporté |
-| Authentification | Non | MD5 |
-| Format mise à jour | Broadcast | Multicast |
-| Résumé auto | Oui, obligatoire | Oui, désactivable |
+| Caractéristique    | RIPv1            | RIPv2             |
+| ------------------ | ---------------- | ----------------- |
+| Classe             | Par classe       | Sans classe       |
+| Masque             | Non inclus       | Inclus            |
+| Diffusion          | 255.255.255.255  | 224.0.0.9         |
+| VLSM               | Non supporté     | Supporté          |
+| Authentification   | Non              | MD5               |
+| Format mise à jour | Broadcast        | Multicast         |
+| Résumé auto        | Oui, obligatoire | Oui, désactivable |
 
 ## 5. Règles de Traitement des Routes (Important)
 

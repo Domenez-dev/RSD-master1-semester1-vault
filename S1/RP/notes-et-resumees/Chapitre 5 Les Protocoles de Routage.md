@@ -16,7 +16,7 @@ graph TD
 ## I Protocoles IGP
 ### 1. Protocoles à Vecteur de Distance
 
-#### [RIP](RIP%20-%20D%C3%A9tails%20Techniques%20Approfondis) (Routing Information Protocol)
+#### [RIP](RIP%20-%20Détails%20Techniques%20Approfondis.md) (Routing Information Protocol)
 - **Caractéristiques**:
   - Métrique simple (nombre de sauts)
   - Maximum 15 sauts
@@ -45,7 +45,7 @@ graph TD
 
 ### 2. Protocoles à État de Liens
 
-#### [OSPF](OSPF%20-%20Détails%20Techniques%20Approfondis) (Open Shortest Path First)
+#### [OSPF](OSPF%20-%20Détails%20Techniques%20Approfondis.md) (Open Shortest Path First)
 
 ```mermaid
 graph TD
