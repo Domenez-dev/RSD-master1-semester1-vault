@@ -1,0 +1,27 @@
+- **Analyseur de performance**: Tool to monitor and analyze system performance metrics.
+- **Assistant configuration de la sécurité**: Wizard to configure and apply security policies.
+- **Centre d'administration Active Directory**: Management center for Active Directory services.
+- **Configuration du système**: Utility to configure system settings and troubleshoot startup issues.
+- **Défragmenter et optimiser les lecteurs**: Tool to defragment and optimize disk drives.
+- **DNS**: Management console for Domain Name System (DNS) server configuration.
+- **Diagnostic de mémoire Windows**: Tool to test and diagnose memory issues.
+- **Domaines et approbations Active Directory**: Utility to manage Active Directory domains and trust relationships.
+- **Gestion d'ordinateur**: Comprehensive tool to manage local or remote computers, including system tools and settings.
+- **Gestion des stratégies de groupe**: Tool to manage Group Policy Objects (GPOs) for centralized management.
+- **Informations système**: Utility to display detailed information about the computer's hardware and software.
+- **Initiateur iSCSI**: Tool to connect to iSCSI storage devices over a network.
+- **Modification ADSI**: Advanced tool to edit Active Directory Service Interfaces (ADSI) settings.
+- **Module Active Directory pour Windows PowerShell**: PowerShell module for managing Active Directory.
+- **Moniteur de ressources**: Tool to monitor system resources like CPU, memory, disk, and network usage.
+- **Observateur d'événements**: Utility to view and manage event logs.
+- **Pare-feu Windows avec fonctionnalités avancées**: Advanced settings for configuring the Windows Firewall.
+- **Planificateur de tâches**: Tool to schedule and automate tasks.
+- **Sauvegarde Windows Server**: Utility to back up and restore Windows Server data.
+- **Services**: Tool to manage system services.
+- **Services de composants**: Utility to manage Component Object Model (COM) and Distributed Component Object Model (DCOM) settings.
+- **Sites et services AD**: Tool to manage Active Directory sites and replication.
+- **Sources de données ODBC (32 bits et 64 bits)**: Tool to manage ODBC data sources for database connectivity.
+- **Stratégie de sécurité locale**: Utility to configure local security policies.
+- **Utilisateurs et ordinateurs AD**: Tool to manage Active Directory users and computers.
+- **PowerShell**: Command-line shell and scripting language for task automation.
+- **PowerShell ISE**: Integrated Scripting Environment for writing and debugging PowerShell scripts.
