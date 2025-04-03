@@ -4,7 +4,7 @@ This cheat sheet provides **ready-to-use templates** for all common socket commu
 
 ---
 
-# 1. Quick-Use Templates  
+# 1. Quick-Use (copy/paste) Templates  
 ### A. UDP Communication
 #### **(1) Full Duplex UDP (Bi-directional)**
 ```java
@@ -122,7 +122,12 @@ while (true) {
 
 
 # 2. Java: Essential Cheat Sheet
-
+## Input Scanner 
+```java
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter message: ");
+String userInput = scanner.nextLine();
+```
 ## Data Type Conversions
 
 ### String ↔ Integer
@@ -165,11 +170,11 @@ Integer i = (Integer)in.readObject();
 
 ## Package Setup
 ```java
-package yourpackage; // Must match directory structure
+package folder_name; // Must match directory structure
 
 import java.net.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets; // For String to byte[]
+import java.nio.charset.StandardCharsets; // For String to bytes[] need
 
 public class P {
     public static void main(String[] args) {
@@ -190,7 +195,7 @@ public class P {
 ```
 
 ## Fetching Connection Details
-
+to fetch remote Ip address and port
 ### TCP Connections
 ```java
 // Server side (after accept())
