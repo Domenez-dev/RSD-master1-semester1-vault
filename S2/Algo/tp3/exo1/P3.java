@@ -1,45 +1,58 @@
-import java.net.*;
 import java.io.*;
+import java.net.*;
 
 public class P3 {
+
     public static void main(String[] args) {
-        try (DatagramSocket udpSocket = new DatagramSocket(6000)) {
-            System.out.println("P3 waiting for UDP messages...");
+        DatagramSocket udpSocket = null;
+        Socket s = null;
+        try {
+            // --- UDP Send ---
+            udpSocket = new DatagramSocket(2033); // (ephemeral)
+            DatagramPacket packet = null; // in case of while loop
+            DatagramPacket r = null;
+            byte[] receiveData = new byte[1024];
+
+            // --- TCP Client Side ---
+            s = new Socket("localhost", 2004);
+            ObjectOutputStream out = new ObjectOutputStream(
+                s.getOutputStream()
+            );
+            ObjectInputStream in = new ObjectInputStream(s.getInputStream());
 
             while (true) {
-                // Receive message from P2
-                byte[] receiveData = new byte[1024];
-                DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-                udpSocket.receive(receivePacket);
-                String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
-                System.out.println("Received from P2: " + message);
+                // UDP receive from P2
+                r = new DatagramPacket(receiveData, receiveData.length);
+                udpSocket.receive(r); // Blocks until data arrives
+                String received = new String(r.getData(), 0, r.getLength());
+                System.out.println("Receive: " + received);
 
-                // Modify the message
-                String modifiedMessage = Integer.toString(Integer.parseInt(message) * 3);
+                // TCP send to P4
+                out.writeObject(received);
+                out.flush();
 
-                // send modified tp P4
-                Socket socket = new Socket("localhost", 7000);
-                System.out.println("Connected to P4");
-        
-                    // send
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                out.println(modifiedMessage);
+                // TCP receive from P4
+                String response = (String) in.readObject(); // Receive
+                System.out.println("Receive :" + response);
 
-                    // receive from P4
-                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String response = in.readLine();
-                System.out.println("Received from P4: " + response);
-
-
-
-                // Send received message back to P2
-                InetAddress p2Address = receivePacket.getAddress();
-                int p2Port = receivePacket.getPort();
-                byte[] sendData = modifiedMessage.getBytes();
-                DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, p2Address, p2Port);
-                udpSocket.send(sendPacket);
-                System.out.println("Sent to P2: " + modifiedMessage);
+                // UDP send to P2
+                packet = new DatagramPacket(
+                    response.getBytes(),
+                    response.getBytes().length,
+                    InetAddress.getByName("localhost"),
+                    2022
+                );
+                udpSocket.send(packet);
             }
-        } catch(Exception e) {System.out.println("P1"+e.toString());}
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        } finally {
+            try {
+                if (s != null) s.close();
+            } catch (IOException e) {}
+            try {
+                if (udpSocket != null) udpSocket.close();
+            } catch (Exception e) {}
+        }
     }
 }

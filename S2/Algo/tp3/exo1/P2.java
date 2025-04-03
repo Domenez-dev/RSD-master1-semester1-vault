@@ -2,45 +2,57 @@ import java.io.*;
 import java.net.*;
 
 public class P2 {
+
     public static void main(String[] args) {
-        // TCP P1-P2
+        ServerSocket tcpSocket = null;
+        DatagramSocket udpSocket = null;
         try {
-            ServerSocket serverSocket = new ServerSocket(5000);
-            System.out.println("waiting for P1...");
+            // --- Server Side TCP ---
+            tcpSocket = new ServerSocket(2002);
+            Socket c = tcpSocket.accept(); // Waits for client
+            ObjectOutputStream out = new ObjectOutputStream(
+                c.getOutputStream()
+            );
+            ObjectInputStream in = new ObjectInputStream(c.getInputStream());
+
+            // --- UDP Send ---
+            udpSocket = new DatagramSocket(2022); // (ephemeral)
+            DatagramPacket packet = null; // in case of while loop
+            DatagramPacket q = null;
+            byte[] udpBuffer = new byte[1024];
 
             while (true) {
-                Socket socket = serverSocket.accept();
-                    System.out.println("P1 connected");
+                // --- TCP with P1 ---
+                String response = (String) in.readObject(); // Receive
+                System.out.println("Receive :" + response);
 
-                    // Receive message from P1
-                    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    String message = in.readLine();
-                    System.out.println("Received from P1: " + message);
+                // --- UDP Send to P3 ---
+                packet = new DatagramPacket(
+                    response.getBytes(), // data.getBytes()
+                    response.getBytes().length,
+                    InetAddress.getByName("localhost"),
+                    2033
+                );
+                udpSocket.send(packet);
 
-                    // Modify the message
-                    String modifiedMessage = Integer.toString(Integer.parseInt(message) * 2);
+                // --- UDP Receive from P3 ---
+                q = new DatagramPacket(udpBuffer, udpBuffer.length);
+                udpSocket.receive(q);
+                String response2 = new String(q.getData(), 0, q.getLength());
+                System.out.println("Receive :" + response2);
 
-                    // UDP send avec P3
-                    DatagramSocket udpSocket = new DatagramSocket();
-                    InetAddress p3Address = InetAddress.getByName("localhost");
-                    byte[] sendData = modifiedMessage.getBytes();
-                    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, p3Address, 6000);
-                    udpSocket.send(sendPacket);
-                    System.out.println("Sent to P3: " + modifiedMessage);
-
-                    // UDP receive de P3
-                    byte[] receiveData = new byte[1024];
-                    DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-                    udpSocket.receive(receivePacket);
-                    String responseFromP3 = new String(receivePacket.getData(), 0, receivePacket.getLength());
-                    System.out.println("Received depuis P3: " + responseFromP3);
-
-                    // Send back to P1
-                    PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                    out.println(responseFromP3);
-
-                    udpSocket.close();
+                out.writeObject(response2); // Send
             }
-        } catch(Exception e) {System.out.println("P1"+e.toString());}
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        } finally {
+            // Cleanup
+            try {
+                if (tcpSocket != null) tcpSocket.close();
+            } catch (IOException e) {}
+            try {
+                if (udpSocket != null) udpSocket.close();
+            } catch (Exception e) {}
+        }
     }
 }
