@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class P1 {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         try {
             DatagramSocket s = new DatagramSocket(9875); // Communication avec P2 - Pour recevoir
             byte[] receiveT = new byte[20];
@@ -20,13 +22,18 @@ public class P1 {
             );
 
             while (true) {
-                out.writeObject("10"); // Sends to P2
+                System.out.print("Enter message: ");
+                String userInput = scanner.nextLine();
+
+                out.writeObject(userInput); // Sends to P2
                 s.receive(q); // Receives from P2
                 String str = new String(q.getData());
                 System.out.println("Receive: " + str);
             }
         } catch (Exception e) {
             System.out.println("Exception:" + e.toString());
+        } finally {
+            scanner.close();
         }
     }
 }

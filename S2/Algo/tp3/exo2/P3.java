@@ -30,7 +30,7 @@ public class P3 {
             );
             socket.send(sendPacket);
 
-            // --- Receiving ---
+            // --- Receiving from P4 ---
             byte[] receiveDataP4 = new byte[1024];
 
             q = new DatagramPacket(receiveDataP4, receiveDataP4.length);
@@ -39,6 +39,7 @@ public class P3 {
             System.out.println("Receive from P4: " + receivedP4String);
             sendData = receivedP4String.getBytes(StandardCharsets.UTF_8);
 
+            // -- Sending to P2
             sendPacket = new DatagramPacket(
                 sendData,
                 sendData.length,

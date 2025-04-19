@@ -19,7 +19,7 @@ public class P4 {
             String N = (String) in.readObject();
             System.out.println("Receive N :" + N);
 
-            // --- Receiving ---
+            // --- Receiving from P4 ---
             byte[] receiveData = new byte[1024];
             DatagramPacket q = null;
 
@@ -28,6 +28,7 @@ public class P4 {
             String M = new String(q.getData(), 0, q.getLength());
             System.out.println("Receive M : " + M);
 
+            // --- Sending to P3 ---
             int S = Integer.parseInt(M) * Integer.parseInt(N);
             System.out.println("sending S : " + S);
 
