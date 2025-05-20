@@ -1,0 +1,44 @@
+<table>
+    <tr>
+        <th></th>
+        {% for j in range(p2_strategies|int) %}
+        <th>
+            <input
+                type="text"
+                name="p2_strat_{{ j }}"
+                value="B{{ j+1 }}"
+                required
+            />
+        </th>
+        {% endfor %}
+    </tr>
+
+    {% for i in range(p1_strategies|int) %}
+    <tr>
+        <td>
+            <input
+                type="text"
+                name="p1_strat_{{ i }}"
+                value="A{{ i+1 }}"
+                required
+            />
+        </td>
+        {% for j in range(p2_strategies|int) %}
+        <td>
+            <input
+                type="number"
+                name="p1_{{ i }}_{{ j }}"
+                placeholder="P1"
+                required
+            />
+            <input
+                type="number"
+                name="p2_{{ i }}_{{ j }}"
+                placeholder="P2"
+                required
+            />
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

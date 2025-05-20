@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Game Theory Analyzer</title>
+        <style>
+            body {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #0d1117;
+                color: #c9d1d9;
+                padding: 20px;
+                max-width: 1000px;
+                margin: auto;
+                border-left: 5px solid #58a6ff;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80")
+                    no-repeat center center fixed;
+                background-size: cover;
+                filter: blur(6px) brightness(0.4);
+                z-index: -1;
+            }
+
+            h1 {
+                color: #58a6ff;
+                border-bottom: 2px dashed #30363d;
+                padding-bottom: 5px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #79c0ff;
+            }
+
+            input[type="number"],
+            input[type="text"] {
+                padding: 8px;
+                width: 100px;
+                background-color: #161b22;
+                color: #c9d1d9;
+                border: 1px solid #30363d;
+            }
+
+            button {
+                padding: 10px 15px;
+                background-color: #58a6ff;
+                color: #161b22;
+                border: none;
+                cursor: pointer;
+                margin-right: 10px;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                background-color: #2386ff;
+            }
+
+            .error {
+                color: #f85149;
+                margin-bottom: 15px;
+            }
+
+            .matrix-container {
+                margin-top: 20px;
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            th,
+            td {
+                border: 1px solid #30363d;
+                padding: 8px;
+                text-align: center;
+            }
+
+            th {
+                background-color: #161b22;
+                color: #58a6ff;
+            }
+
+            td {
+                background-color: #0d1117;
+            }
+
+            form {
+                background: rgba(13, 17, 23, 0.8); /* Dark semi-transparent */
+                backdrop-filter: blur(8px); /* Adds blur */
+                -webkit-backdrop-filter: blur(8px); /* Safari support */
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🎮 Game Theory Analyzer</h1>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="post">
+            <div class="form-group">
+                <label for="p1_strategies"># Player 1 Strategies:</label>
+                <input
+                    type="number"
+                    id="p1_strategies"
+                    name="p1_strategies"
+                    min="1"
+                    max="10"
+                    value="{{ p1_strategies }}"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="p2_strategies"># Player 2 Strategies:</label>
+                <input
+                    type="number"
+                    id="p2_strategies"
+                    name="p2_strategies"
+                    min="1"
+                    max="10"
+                    value="{{ p2_strategies }}"
+                    required
+                />
+            </div>
+
+            <button type="button" onclick="updateForm()">Update Matrix</button>
+
+            <div id="matrix-form" class="matrix-container">
+                {% include 'matrix_form.html' %}
+            </div>
+            <br />
+            <button type="submit">Analyze Game</button>
+        </form>
+
+        <script>
+            function updateForm() {
+                const p1 = document.getElementById("p1_strategies").value;
+                const p2 = document.getElementById("p2_strategies").value;
+
+                fetch("/update_form", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: `p1_strategies=${p1}&p2_strategies=${p2}`,
+                })
+                    .then((response) => response.text())
+                    .then((html) => {
+                        document.getElementById("matrix-form").innerHTML = html;
+                    });
+            }
+        </script>
+    </body>
+</html>

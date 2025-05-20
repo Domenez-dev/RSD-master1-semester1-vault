@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Analysis Results</title>
+        <style>
+            body {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #0d1117;
+                color: #c9d1d9;
+                padding: 20px;
+                max-width: 1000px;
+                margin: auto;
+                border-left: 5px solid #58a6ff;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80")
+                    no-repeat center center fixed;
+                background-size: cover;
+                filter: blur(6px) brightness(0.4);
+                z-index: -1;
+            }
+
+            h1,
+            h2 {
+                color: #58a6ff;
+                border-bottom: 1px dashed #30363d;
+                padding-bottom: 5px;
+            }
+
+            .results-section {
+                margin-bottom: 30px;
+                padding: 15px;
+                border: 1px solid #30363d;
+                background: rgba(13, 17, 23, 0.8); /* Dark semi-transparent */
+                backdrop-filter: blur(8px); /* Adds blur */
+                -webkit-backdrop-filter: blur(8px); /* Safari support */
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            th,
+            td {
+                border: 1px solid #30363d;
+                padding: 8px;
+                text-align: center;
+            }
+
+            th {
+                background-color: #21262d;
+                color: #79c0ff;
+            }
+
+            td {
+                background-color: #0d1117;
+            }
+
+            .back-btn {
+                display: inline-block;
+                padding: 10px 15px;
+                background-color: #238636;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            .back-btn:hover {
+                background-color: #2ea043;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>📈 Game Analysis Results</h1>
+
+        <div class="results-section">
+            <h2>Input Matrix</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    {% for j in range(matrix[0]|length) %}
+                    <th>{{ matrix[0][j][3] }}</th>
+                    {% endfor %}
+                </tr>
+                {% for i in range(matrix|length) %}
+                <tr>
+                    <td><strong>{{ matrix[i][0][2] }}</strong></td>
+                    {% for j in range(matrix[i]|length) %}
+                    <td>({{ matrix[i][j][0] }}, {{ matrix[i][j][1] }})</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="results-section">
+            <h2>Strictly Dominant Strategies</h2>
+            {% if results.strict_dominant.P1 or results.strict_dominant.P2 %} {%
+            if results.strict_dominant.P1 %}
+            <p>
+                <strong>Player 1:</strong> {{ results.strict_dominant.P1|join(',
+                ') }}
+            </p>
+            {% endif %} {% if results.strict_dominant.P2 %}
+            <p>
+                <strong>Player 2:</strong> {{ results.strict_dominant.P2|join(',
+                ') }}
+            </p>
+            {% endif %} {% else %}
+            <p>No strictly dominant strategies found.</p>
+            {% endif %}
+        </div>
+
+        <div class="results-section">
+            <h2>Equilibrium through Elimination</h2>
+            {% if results.elimination %}
+            <ul>
+                {% for outcome in results.elimination %}
+                <li>{{ outcome }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No strategies remain after elimination.</p>
+            {% endif %}
+        </div>
+
+        <div class="results-section">
+            <h2>Pareto Optimal Outcomes</h2>
+            {% if results.pareto %}
+            <ul>
+                {% for outcome in results.pareto %}
+                <li>{{ outcome }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No Pareto optimal outcomes found.</p>
+            {% endif %}
+        </div>
+
+        <div class="results-section">
+            <h2>Security Levels (Maximin)</h2>
+            <p><strong>Player 1:</strong> {{ results.security.P1 }}</p>
+            <p><strong>Player 2:</strong> {{ results.security.P2 }}</p>
+        </div>
+
+        <div class="results-section">
+            <h2>Pure Nash Equilibria</h2>
+            {% if results.nash %}
+            <ul>
+                {% for eq in results.nash %}
+                <li>{{ eq }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No pure Nash equilibria found.</p>
+            {% endif %}
+        </div>
+
+        <a href="/" class="back-btn">🔁 Analyze Another Game</a>
+    </body>
+</html>
