@@ -5,37 +5,27 @@ import java.util.Scanner;
 public class P1 {
 
     public static void main(String[] args) {
-        Socket socket = null;
+        Socket s = null;
         Scanner scanner = new Scanner(System.in);
         try {
-            // --- TCP Client Side ---
-            socket = new Socket("localhost", 2002);
+            // --- Client Side ---
+            Socket s = new Socket("localhost", 2002);
             ObjectOutputStream out = new ObjectOutputStream(
-                socket.getOutputStream()
+                s.getOutputStream()
             );
-            ObjectInputStream in = new ObjectInputStream(
-                socket.getInputStream()
-            );
+            ObjectInputStream in = new ObjectInputStream(s.getInputStream());
 
             while (true) {
                 // --- Read from keyboard ---
                 System.out.print("Enter message: ");
                 String userInput = scanner.nextLine();
-
-                // Exit condition
-                if ("exit".equalsIgnoreCase(userInput)) {
-                    break;
-                }
-                // --- Sending/Receiving TCP ---
-                out.writeObject(userInput); // Send
-                String response = (String) in.readObject(); // Receive
-                System.out.println("Receive :" + response);
+                out.writeObject(userInput);
             }
         } catch (Exception e) {
             System.out.println("Client error: " + e.toString());
         } finally {
             try {
-                if (socket != null) socket.close();
+                if (s != null) s.close();
                 scanner.close();
             } catch (IOException e) {
                 System.out.println("Error closing sockets: " + e.toString());

@@ -204,4 +204,4 @@ def update_form():
                          p2_strategies=int(p2_strategies))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5050)
+    app.run(debug=True, port=5000)
